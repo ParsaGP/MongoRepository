@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MongoDbRepository
 {
-    public class Class1
+    public interface IMongoRepository<T, TKey> where T: class
     {
+        T Find(TKey Id);
     }
 }
